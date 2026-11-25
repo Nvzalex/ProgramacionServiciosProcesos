@@ -3,7 +3,6 @@ package examen;
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
-
 public class PrincipalCompeticiónJuegos {
 	public static int jugadores;
 

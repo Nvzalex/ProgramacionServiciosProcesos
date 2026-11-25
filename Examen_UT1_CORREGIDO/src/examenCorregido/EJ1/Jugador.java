@@ -2,30 +2,19 @@ package examenCorregido.EJ1;
 
 public class Jugador extends Thread {
     private String nombre;
-    private double puntuacion;
-
     public Jugador(String nombre) {
         this.nombre = nombre;
     }
 
+    @Override
     public void run() {
         System.out.println(nombre + " inicia su partida");
+        long tiempo = (long) (Math.random() * 6000);
         try {
-            int tiempo = (int) (Math.random() * 5) + 1;
-            Thread.sleep(tiempo * 1000);
+            Thread.sleep(tiempo);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
-        puntuacion = Math.random() * 9 + 1;
-        System.out.println(nombre + " finaliza su partida!!");
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public double getPuntuacion() {
-        return puntuacion;
+        System.out.println(nombre + " finaliza su partida");
     }
 }

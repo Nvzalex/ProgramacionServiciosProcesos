@@ -11,5 +11,5 @@ public class Jugador extends Thread {
 			System.out.println(jugador + " inicia su partida");
 		}
 	}
-		
+
 }
