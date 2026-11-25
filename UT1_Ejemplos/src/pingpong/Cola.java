@@ -3,13 +3,13 @@ package pingpong;
 public class Cola {
 	private String cadena;
 	private boolean disponible = false;
-	
+
 	public synchronized String get() {
-		while (disponible == false) {
+		while (!disponible) {
 			try {
 				wait();
 			} catch (InterruptedException e) {
-				e.printStackTrace();
+				Thread.currentThread().interrupt();
 			}
 		}
 		disponible = false;
@@ -18,16 +18,15 @@ public class Cola {
 	}
 
 	public synchronized void put(String valor) {
-		while (disponible == true) {
+		while (disponible) {
 			try {
 				wait();
 			} catch (InterruptedException e) {
-				e.printStackTrace();
+				Thread.currentThread().interrupt();
 			}
 		}
 		cadena = valor;
 		disponible = true;
 		notifyAll();
 	}
-
 }

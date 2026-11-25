@@ -10,7 +10,7 @@ public class HiloJoin extends Thread{
 
 	public void run () {
 		for (int i = 0; i < limite; i++) {
-			System.out.println("Hilo " + this.getName() + " contador " + this.getId());
+			System.out.println("Hilo " + this.getName() + " contador " + this.threadId());
 		}
 		System.out.println("Hilo " + this.getName() + " terminado ");
 	}

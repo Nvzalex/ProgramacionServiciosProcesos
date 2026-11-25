@@ -13,7 +13,7 @@ public class Consumidor extends Thread {
 
 	public void run() {
 		int valor = 0;
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < maxPila; i++) {
 			valor = cola.get();
 			System.out.println(i + " Consumidor: " + n + " consume el número " + valor);
 		}

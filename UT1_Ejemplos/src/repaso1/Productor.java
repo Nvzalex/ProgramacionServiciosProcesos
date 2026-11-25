@@ -12,7 +12,7 @@ public class Productor extends Thread{
 	}
 
 	public void run () {
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < maxPila; i++) {
 			cola.put(i);
 			System.out.println(i + " Productor: " + n + " produce el número " + i);
 		}
