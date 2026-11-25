@@ -17,7 +17,7 @@ public class PrincipalCompeticionJuegos {
             "ÁGATA", "JAVIER", "DANIEL", "ARTURO", "HERNÁN",
             "MANUEL", "ALVAR", "MARTÍN", "SEBASTIÁN", "NACHO"
         };
-
+        	
         List<Jugador> jugadores = new ArrayList<>();
 
         for (int i = 0; i < numJugadores; i++) {
